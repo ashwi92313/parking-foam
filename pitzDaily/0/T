@@ -14,33 +14,29 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 0 0 1 0 0 0];
+dimensions      [0 -3 0 0 1 0 0]; // mol/m^3
 
 internalField   uniform 0;
 
 boundaryField
 {
-    inlet
+    topWall
+    {
+        type            zeroGradient;
+    }
+    leftWall
     {
         type            fixedValue;
-        value           uniform 1;
+	value		uniform    0;
     }
-
-    outlet
-    {
-        type            zeroGradient;
-    }
-
-    upperWall
-    {
-        type            zeroGradient;
-    }
-
     lowerWall
     {
         type            zeroGradient;
     }
-
+    rightWall
+    {
+        type            zeroGradient;
+    }
     frontAndBack
     {
         type            empty;
