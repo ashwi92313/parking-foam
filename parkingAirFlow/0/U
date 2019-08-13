@@ -20,6 +20,15 @@ internalField   uniform (0 0 0);
 
 boundaryField
 {
+    inlet
+    {
+        type            fixedValue;
+        value           uniform (20 0 0);
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
     walls
     {
         type            noSlip;
