@@ -1,1 +1,1 @@
-cellSet sourceBlocks new boxToCell (2 2 0) (3 3 0.01)
+cellSet sourceWall new boxToCell (2 2 0) (3 3 0.01)

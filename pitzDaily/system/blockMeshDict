@@ -64,7 +64,7 @@ boundary
         (2 6 5 1)
     );
     }
-	lowerWall
+	bottomWall
     {
         type    wall;
         faces
