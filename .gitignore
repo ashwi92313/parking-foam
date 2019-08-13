@@ -1,0 +1,7 @@
+[0-9]*/
+!0/
+VTK/
+*polyMesh/
+*log.*
+logs
+testLoopReport
