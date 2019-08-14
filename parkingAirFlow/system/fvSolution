@@ -71,12 +71,30 @@ solvers
         tolerance       1e-05;
         relTol          0;
     }
+    pFinal
+    {
+        $p;
+        relTol          0;
+    }
+    "(U|k|epsilon)Final"
+    {
+        $U;
+        relTol          0;
+    }
 }
 
+/*
 PISO
 {
     nCorrectors     2;
     nNonOrthogonalCorrectors 0;
+}
+*/
+
+PIMPLE
+{
+    nNonOrthogonalCorrectors 0;
+    nCorrectors         2;
 }
 
 // ************************************************************************* //
