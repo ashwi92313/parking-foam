@@ -28,52 +28,16 @@ solvers
         agglomerator    faceAreaPair;
         mergeLevels     1;
     }
-
-    U
-    {
-        solver          PBiCG;
-        preconditioner  DILU;
-        tolerance       1e-05;
-        relTol          0;
-    }
     pFinal
     {
-        solver          PCG;
-        preconditioner  DIC;
-        tolerance       1e-06;
+        $p
         relTol          0;
     }
-    k
+    "(U|k|epsilon|R|nuTilda)"
     {
         solver          PBiCG;
         preconditioner  DILU;
         tolerance       1e-05;
-        relTol          0;
-    }
-    epsilon
-    {
-        solver          PBiCG;
-        preconditioner  DILU;
-        tolerance       1e-05;
-        relTol          0;
-    }
-    R
-    {
-        solver          PBiCG;
-        preconditioner  DILU;
-        tolerance       1e-05;
-        relTol          0;
-    }
-    nuTilda
-    {
-        solver          PBiCG;
-        preconditioner  DILU;
-        tolerance       1e-05;
-        relTol          0;
-    }
-    pFinal
-    {
-        $p;
         relTol          0;
     }
     "(U|k|epsilon)Final"
@@ -82,14 +46,6 @@ solvers
         relTol          0;
     }
 }
-
-/*
-PISO
-{
-    nCorrectors     2;
-    nNonOrthogonalCorrectors 0;
-}
-*/
 
 PIMPLE
 {
