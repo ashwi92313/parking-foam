@@ -1,0 +1,51 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      fvOptions;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// momentum source for downward facing fans
+d_momentumSource
+{
+    type            meanVelocityForce;
+    active          yes;
+ 
+    meanVelocityForceCoeffs
+    {
+        selectionMode   cellSet;
+        cellSet downwardfans;
+        fields          (U);
+        Ubar            (0 -0.5 0);
+        relaxation      1.0;
+    }
+}
+
+// momentum source for upward facing fans
+u_momentumSource
+{
+    type            meanVelocityForce;
+    active          yes;
+ 
+    meanVelocityForceCoeffs
+    {
+        selectionMode   cellSet;
+        cellSet upwardfans;
+        fields          (U);
+        Ubar            (0 0.5 0);
+        relaxation      1.0;
+    }
+}
+ 
+
+// ************************************************************************* //

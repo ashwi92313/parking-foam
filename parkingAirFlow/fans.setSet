@@ -1,0 +1,11 @@
+# Format:
+# cellSet name new boxToCell (xmin ymin zmin) (xmax ymax zmax)
+
+# Downward facing fans
+cellSet downwardfans new boxToCell (39 24.5 0) (40 25 0.01)
+cellSet downwardfans add boxToCell (10 24.5 0) (11 25 0.01)
+
+# Upward facing fans
+cellSet upwardfans new boxToCell (39 5 0) (40 5.5 0.01)
+cellSet upwardfans add boxToCell (10 5 0) (11 5.5 0.01)
+
