@@ -9,8 +9,11 @@ application=`getApplication`
 echo "Running blockMesh"
 blockMesh > log.blockMesh
 
-echo "Running pisoFoam"
-$application > log.pisoFoam &
+echo "Running setSet"
+find -name "*.setSet" -exec setSet -batch {} ';'
+
+echo "Running pimpleFoam"
+$application > log.pimpleFoam &
 
 #echo "Plotting residuals"
 #sleep 2

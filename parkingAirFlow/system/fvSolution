@@ -33,7 +33,7 @@ solvers
         $p
         relTol          0;
     }
-    "(U|k|epsilon|R|nuTilda)"
+    "(U|k|epsilon)"
     {
         solver          PBiCG;
         preconditioner  DILU;
