@@ -1,5 +1,10 @@
 {
     "files.exclude": {
-        "*/[0-9].*/": true,
+        "**/[1-9]/": true,
+        "**/[0-9]?*/": true,
+        "**/VTK/": true,
+        "**/polyMesh/": true,
+        "**/log.*": true,
+        "**/*.OpenFOAM": true,
     }
 }

@@ -5,3 +5,4 @@ VTK/
 *log.*
 logs
 testLoopReport
+*.OpenFOAM
