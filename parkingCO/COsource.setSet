@@ -1,1 +1,4 @@
-cellSet COsource new boxToCell (2 2 0) (3 3 0.01)
+cellSet COsource new
+cellSet COsource invert
+
+# cellSet COsource new boxToCell (2 2 0) (3 3 0.01)
