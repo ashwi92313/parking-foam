@@ -22,12 +22,12 @@ boundaryField
 {
     inlet
     {
-        type            fixedValue;
+        type            totalPressure;  // other option zeroGradient
         value           uniform 0;
     }
     outlet
     {
-        type            zeroGradient;
+        type            zeroGradient;  // other option fixedValue of 0
     }
     walls
     {
