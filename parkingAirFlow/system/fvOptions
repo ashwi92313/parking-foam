@@ -26,7 +26,7 @@ d_momentumSource
         selectionMode   cellSet;
         cellSet downwardfans;
         fields          (U);
-        Ubar            (0 -0.5 0);
+        Ubar            (0 -7 0);
         relaxation      1.0;
     }
 }
@@ -42,10 +42,9 @@ u_momentumSource
         selectionMode   cellSet;
         cellSet upwardfans;
         fields          (U);
-        Ubar            (0 0.5 0);
+        Ubar            (0 7 0);
         relaxation      1.0;
     }
 }
- 
 
 // ************************************************************************* //
