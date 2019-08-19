@@ -22,13 +22,13 @@ boundaryField
 {
     inlet
     {
-        type            zeroGradient;
+        type            pressureInletVelocity;      //other option fixed value of 0
     }
     outlet
     {
         
-        type            fixedValue;
-        value           uniform (7 0 0);
+        type            flowRateOutletVelocity;
+        value           uniform (98.17 0 0); //for v=5 m/s d=5m //other option pressureInletOutletVelocity
     }
     walls
     {
